@@ -82,17 +82,28 @@ header, main, footer {
     line-height: 1.8em;
 }
 
+/* button animation */
+
+@keyframes fade-in-down {
+    0% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+}
+
 .button {
     padding: 15px 25px;
     border-radius: 5px;
     background-color: var(--main-color);
     color: var(--white-color);
-    transition: transform .4s ease;
+    animation: fade-in-down 1s ease-in-out infinite alternate;
 }
 
 .button:hover {
     background-color: #088144;
-    transform: translate(0, -5px);
 }
 
 .button .fa-angle-right {
@@ -330,10 +341,6 @@ hr {
     .side-menu {
         position: inherit;
         margin-bottom: 30px;
-    }
-
-    .view-all {
-        display: block;
     }
     
     .matches {
