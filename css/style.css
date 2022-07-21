@@ -1,0 +1,363 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* css variables */
+
+:root {
+    --main-color: #0B9851;
+    --secondary-color: #161616;
+    --white-color: #FFF;
+    --border-color: #E8E8E8;
+}
+
+/* common sytles */
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 50px 0;
+    padding: 0 25px;
+}
+
+/* top section */
+
+.hero-row {
+    background-color: #072616;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-heading h1 {
+    color: var(--white-color);
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.3em;
+    margin: 0;
+}
+
+.hero-heading p {
+    color: var(--white-color);
+    margin-bottom: 50px;
+}
+
+.button {
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    transition: transform .4s ease;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #088144;
+    transform: translate(0, -5px);
+}
+
+.button .fa-angle-right {
+    margin-left: 5px;
+}
+
+.hero-banner img {
+    float: right;
+}
+
+/* blog section */
+
+.blog-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 30px;
+}
+
+.blog-menu {
+    height: fit-content;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    grid-row-gap: 30px;
+    align-items: center;
+    position: sticky;
+    top: 50px;
+}
+
+.blog-menu a {
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    color: var(--main-color);
+    display: block;
+    font-weight: 500;
+    text-align: center;
+}
+
+.blog-menu a:hover {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+.blog-menu a:last-child {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+.blog-menu a:last-child:hover {
+    color: var(--main-color);
+    background-color: var(--white-color);
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+
+.blog {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.blog:hover {
+    border: 1px solid var(--main-color);
+}
+
+.blog-thumbnail img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.4s ease-in-out;
+}
+
+.blog-thumbnail img:hover {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transform: scale(1.05);
+}
+
+.blog-info {
+    padding: 20px;
+}
+
+.blog-info > a {
+    color: var(--secondary-color);
+    padding: 5px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    display: inline;
+}
+
+.blog-info > a:hover {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.blog-info > h4 > a {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.blog-info > h4 > a:hover {
+    color: var(--main-color);
+}
+
+.blog-info span a i {
+    margin-right: 5px;
+}
+
+.blog-info span {
+    margin-right: 25px;
+}
+
+.blog-info span a {
+    color: var(--secondary-color);
+}
+
+.blog-info span a:hover {
+    color: var(--main-color);
+}
+
+.blog-row > div > .button {
+    display: none;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+.footer-logo h1 {
+    font-size: 70px;
+    color: var(--white-color);
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+hr {
+    width: 100%;
+    border-color: var(--border-color);
+}
+
+.footer-menu {
+    margin: 30px 0;
+}
+
+.footer-menu ul, .footer-social ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-menu ul li a, .footer-social ul li a {
+    color: var(--white-color);
+}
+
+.footer-menu ul li a:hover {
+    color: var(--main-color);
+}
+
+.footer-social ul li a {
+    font-size: 50px;
+    transition: transform 0.4s ease;
+    display: inline-block;
+}
+
+.footer-social ul li a:hover {
+    color: #c9c9c9;
+    transform: translate(0, -5px);
+}
+
+/* mobile responsive */
+
+@media screen and (max-width: 576px) {
+
+    .hero-row {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 50px;
+    }
+
+    .hero-heading {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero-heading p {
+        color: var(--white-color);
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .hero-heading h1 {
+        font-size: 30px;
+    }
+    
+    .blog-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blog-menu {
+        position: inherit;
+        margin-bottom: 30px;
+    }
+
+    .blog-row > div:last-child {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .blog-row > div > .button {
+        display: inherit;
+        align-items: center;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu ul, .footer-social ul {
+        padding: 0;
+    }
+}
+
+/* tablet responsive */
+
+@media screen and (min-width: 577px ) and (max-width: 992px) {
+    
+    .hero-heading h1 {
+        font-size: 30px;
+    }
+
+    .blog-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blog-menu {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        margin-bottom: 30px;
+        position: inherit;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog:nth-last-child(-n+3) {
+        display: none;
+    }
+
+    .blog-row > div:last-child {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .blog-row > div > .button {
+        display: inherit;
+        align-items: center;
+    }
+    
+}
